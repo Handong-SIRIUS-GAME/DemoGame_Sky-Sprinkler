@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
+            GameManager.Instance.AddScore(10);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

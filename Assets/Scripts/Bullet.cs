@@ -6,11 +6,8 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
-
-        //총알의 y 위치가 7보다 크면
         if(transform.position.y > 7.0f)
         {
-            //게임 오브젝트 파괴
             Destroy(gameObject);
         }
     }
